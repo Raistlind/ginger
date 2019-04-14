@@ -13,7 +13,16 @@
 
 # import lib
 
+from app.libs.redprint import Redprint
 
-@app.route('/v1/book/get')
+api = Redprint('book')
+
+
+@api.route('/get')
 def get_book():
     return 'get book'
+
+
+@api.route('/create')
+def create_book():
+    return 'create book'

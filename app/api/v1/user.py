@@ -10,10 +10,13 @@
 2019-04-07 21:33      RaistlinD    1.0         None
 """
 
-
 # import lib
 
+from app.libs.redprint import Redprint
 
-@app.route('/v1/user/get')
+api = Redprint('user')
+
+
+@api.route('/get')
 def get_user():
     return 'RaistlinD'

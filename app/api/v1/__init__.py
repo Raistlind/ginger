@@ -11,4 +11,15 @@
 """
 
 # import lib
+from flask import Blueprint
+from app.api.v1 import user, book
 
+
+def create_blueprint_v1():
+    # from app.api.v1.book import api as user
+    # from app.api.v1.user import api as book
+    bp_v1 = Blueprint('v1', __name__)
+
+    user.api.register(bp_v1)
+    book.api.register(bp_v1)
+    return bp_v1
