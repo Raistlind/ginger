@@ -12,3 +12,8 @@
 
 # import lib
 
+SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://root:123456@localhost:8889/ginger'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+SQLALCHEMY_COMMIT_TEARDOWN = True
+
+SECRET_KEY = 'adedfefdgrgdw'
