@@ -14,6 +14,7 @@
 from flask import request
 
 from app.libs.enums import ClientTypeEnum
+from app.libs.error import APIException
 from app.libs.error_code import ClientTypeError
 from app.libs.redprint import Redprint
 from app.models.user import User
